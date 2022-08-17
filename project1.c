@@ -258,7 +258,7 @@ int main()
          system("color 4");}
 
          else
-         { printf("\n\a!!!!!!!!!!!!!Congratualization !!!!!!!!!!!!!\n\a");
+         { printf("\n\a!!!!!!!!!!!!!Congratulations!!!!!!!!!!!!!\n\a");
            printf("\a               You have Won      \a\a\a ");
            system("color 1");
          }
