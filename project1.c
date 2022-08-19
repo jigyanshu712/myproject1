@@ -169,13 +169,17 @@ void gameRule(int arr[][4])
     printf("\n\n            winning situation:         \n");
 
     printf("---------------------\n");
-    for(i=0;i<4;i++)
+   for(i=0;i<4;i++)
    { printf("| ");
        for(j=0;j<4;j++)
     {   if(arr[i][j]!=0)
         printf("%-2d | ",4*i+j+1);
+        else{
+            if(i==3 &&j==3)
+            printf("    |");
+
         else
-        printf("   |");
+        printf("   |");}
     }
     printf("\n");
    }
