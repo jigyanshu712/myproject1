@@ -31,7 +31,6 @@ void  createMatrix(int arr[][4])
 
 }
 
-
 void showMatrix(int arr[][4])
 {
     int i,j;
@@ -42,7 +41,6 @@ void showMatrix(int arr[][4])
     {   if(arr[i][j]!=0)
         printf("%-2d | ",arr[i][j]);
         else
-
         printf("   | ");
     }
     printf("\n");
@@ -50,8 +48,6 @@ void showMatrix(int arr[][4])
 
     printf("--------------------\n");
 }
-
-
 int winner(int arr[][4])
 {
     int i,j,k=1;
@@ -66,13 +62,21 @@ int winner(int arr[][4])
         return 0;
         return 1;
 }
-
 void swap(int *x,int *y)
 {
  *x=*x+*y;
  *y=*x-*y;
  *x=*x-*y;
     printf("");
+}
+int readEnteredKey()
+{
+        char c;
+            c=_getch();
+            if(c==-32)
+            c=_getch();
+
+    return c;
 }
 
 int shiftUp(int arr[][4])
@@ -145,10 +149,10 @@ int shiftLeft(int arr[][4])
         return 1;
 }
 
-// Game rules
 void gameRule(int arr[][4])
 {
     system("cls");
+ //   int x=readEnteredKey();
     int i,j,k=1;
     printf("                 RULE OF THIS GAME                 \n");
     printf("\n1.You can move only 1 step at a time by arrow key ");
@@ -175,7 +179,6 @@ void gameRule(int arr[][4])
     }
     printf("\n");
    }
-
     printf("---------------------\n");
     printf("\n5.You can exit the game at any time by pressing 'E' or 'e' ");
 
@@ -184,14 +187,14 @@ void gameRule(int arr[][4])
     printf("\n         Happy gaming , Good Luck\n");
 
     printf("\nEnter any key to start.....   ");
-    getch();
-
+   int x=readEnteredKey();
 }
+
 
 int main()
 {
     int arr[4][4];
-    int maxmove=40;
+    int maxmove=4;
     char name[20];
     system("color 6F");
    system("cls");
@@ -216,9 +219,7 @@ int main()
               showMatrix(arr);
 
 
-         char key;
-         key=getch();
-
+        int key=readEnteredKey();
         switch(key)
         {
             case 69:
@@ -248,7 +249,7 @@ int main()
                         break;
             default:
 
-                       printf("\n\n      Not Allowed ");
+                       printf("\n\n    \a\a  Not Allowed \a ");
 
         }
 
@@ -258,7 +259,7 @@ int main()
          system("color 4");}
 
          else
-         { printf("\n\a!!!!!!!!!!!!!Congratulations!!!!!!!!!!!!!\n\a");
+         { printf("\n\a!!!!!!!!!!!!!Congratulations !!!!!!!!!!!!!\n\a");
            printf("\a               You have Won      \a\a\a ");
            system("color 1");
          }
