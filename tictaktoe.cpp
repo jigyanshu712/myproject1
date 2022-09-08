@@ -145,12 +145,12 @@ void displayGame()
         {
             if (matrix[i][j] >= 1 && matrix[i][j] <= 9){
 
-                cout << matrix[i][j] << "|"<<"   ";}
+                cout << matrix[i][j] <<"   ";}
             else
                 cout << (char)matrix[i][j] << "   ";
         }
         cout << "\n\n";
-        cout << "|"<<"   ";
+        cout <<"  ";
 
     }
 }
